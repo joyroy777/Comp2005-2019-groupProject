@@ -1,0 +1,65 @@
+	Extra code found in GUI class currently unsed so moved out unitl properly implemented 
+	
+	
+	//		public Blokus_Frame()
+//	      {
+//	         super("Blokus");
+//	         board = new BlokusBoard();
+//	         players = new BlokusPlayer[Num_Player];
+//	         players[0] = new BlokusPlayer(BlokusBoard.BLUE);
+//	         players[1] = new BlokusPlayer(BlokusBoard.RED);
+//	         players[2] = new BlokusPlayer(BlokusBoard.YELLOW);
+//	         players[3] = new BlokusPlayer(BlokusBoard.GREEN);
+//	         
+//	         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//	         initializeGUI();
+//	      }
+//		
+//		private void initializeGUI() {
+//			class ClickListener implements MouseListener, MouseMotionListener, MouseWheelListener{
+//				public void mouseClicked(MouseEvent e) {
+//					
+//				}
+//
+//				@Override
+//				public void mouseWheelMoved(MouseWheelEvent arg0) {
+//					// TODO Auto-generated method stub
+//					
+//				}
+//
+//				@Override
+//				public void mouseDragged(MouseEvent arg0) {
+//					// TODO Auto-generated method stub
+//					
+//				}
+//
+//				@Override
+//				public void mouseMoved(MouseEvent arg0) {
+//					// TODO Auto-generated method stub
+//					
+//				}
+//
+//				@Override
+//				public void mouseEntered(MouseEvent arg0) {
+//					// TODO Auto-generated method stub
+//					
+//				}
+//
+//				@Override
+//				public void mouseExited(MouseEvent arg0) {
+//					// TODO Auto-generated method stub
+//					
+//				}
+//
+//				@Override
+//				public void mousePressed(MouseEvent arg0) {
+//					// TODO Auto-generated method stub
+//					
+//				}
+//
+//				@Override
+//				public void mouseReleased(MouseEvent arg0) {
+//					// TODO Auto-generated method stub
+//					
+//				} 
+//			}
