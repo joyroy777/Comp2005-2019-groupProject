@@ -1,0 +1,68 @@
+\documentclass[16pt]{article}
+\usepackage[margin=3cm]{geometry}
+\setlength\parindent{0pt}
+
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+	\fancyhf{}
+	\lhead{Use Case \#2}
+	\chead{Comp 2005}
+	\rhead{Project Group \#4}
+	\cfoot{Page \thepage}
+}
+\pagestyle{plain}
+
+\begin{document}
+	\date{}
+	\author{}
+	\title{ \bf
+		\underline{Fully Dressed Use Case \#2} \\ 
+		\underline{(Toggle Colorblind Mode)}
+	}
+	\maketitle
+
+	\textbf{Primary Actor:} Player \\
+
+	\textbf{Stakeholders and Interests:}
+	\begin{itemize}
+		\item \underline{Player:}
+		wants to be able to set the display to accommodate color deficient vision.
+	\end{itemize}
+
+	\textbf{Preconditions:}
+	\begin{itemize}
+		\item Player has opened up a menu (either the main menu, or the in-game menu)
+	\end{itemize}
+
+	\textbf{Postconditions:}
+	\begin{itemize}
+		\item The existence of shapes placed on each game piece (unique to the color of those pieces) will toggle.
+	\end{itemize}
+
+	\textbf{Main Success Scenario:}
+	\begin{enumerate}
+		\item The player selects "Toggle Colorblind Mode" from the menu.
+		\item The system Will change the status indicator beside that selection to indicate the new status of the Colorblind Mode. 
+		\item The system will change the display of any existing tiles to show/hide the assisting shapes.
+		\item The system will display any subsequent tiles placed in the same manner.
+	\end{enumerate}
+
+	\textbf{Alternative Flows:} \\
+	\underline{Alt3: No tiles have been placed yet}
+	\begin{enumerate}
+		\item The system makes no change to the display. Flow resumes at Main Success Scenario Step 4.
+	\end{enumerate}
+
+	\textbf{Special Requirements:}
+	\begin{itemize}
+		\item Shapes chosen to replace color as a tile's identifier must be easily distinguishable.
+		\item It should be obvious which shape identifier belongs to which player. 
+	\end{itemize}
+
+	\textbf{Open Issues:}
+	\begin{itemize}
+		\item Should this status be set on a per-player basis?
+	\end{itemize}
+\end{document}

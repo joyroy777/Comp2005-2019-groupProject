@@ -1,0 +1,41 @@
+\documentclass[12]{article}
+\usepackage{tikz-uml}
+\thispagestyle{empty}
+\tikzumlset{fill class=blue!20}
+
+\begin{document}
+	\begin{tikzpicture}[remember picture,overlay]
+		% define nodes
+		\umlclass[x=5, y=0, width=3.5cm]{AI}{difficulty}{}
+
+		\umlclass[x=0, y=-5, width=3.5cm]{Player}{type\\turn position\\color}{}
+		\umlclass[x=10, y=-5, width=3.5cm]{Block Inventory}{}{}
+
+		\umlclass[x=5, y=-9, width=3.5cm]{Block}{color}{}
+
+		\umlclass[x=0, y=-13, width=3.5cm]{Move}{}{}
+		\umlclass[x=10, y=-13, width=3.5cm]{Gameboard}{}{}
+
+		\umlclass[x=5, y=-18, width=3.5cm]{History}{}{}
+
+		% define associations
+		\umlassoc[mult1={0,1}, mult2=0..4]{AI}{Player}
+		\umlassoc[mult1=1, mult2=1]{Player}{Block Inventory}
+		\umlassoc[mult1=1, mult2=21]{Player}{Block}
+		\umlassoc[mult1=1, mult2=*]{Player}{Move}
+		\umlassoc[mult1=0..21, mult2={0,1}]{Block}{Block Inventory}
+		\umlassoc[mult1={0,1}, mult2=0..84]{Gameboard}{Block}
+		\umlassoc[mult1=1, mult2=1]{Block}{Move}
+		\umlassoc[mult1=*, mult2=1]{Move}{History}
+
+		% make labels
+		\node[rotate=45] at (2.8, -2.5) (ai-player) {controls $\Rightarrow$};
+		\node at (5, -4.8) (player-inventory) {owns $\Rightarrow$};
+		\node[rotate=-41] at (2.8, -7) (player-block) {owns $\Rightarrow$};
+		\node[rotate=90] at (0.3, -9) (player-move) {$\Leftarrow$ takes};
+		\node[rotate=41] at (2.8, -11) (block-inventory) {$\Leftarrow$ was used for};
+		\node[rotate=41] at (7.8, -7) (gameboard-block) {$\Leftarrow$ contains};
+		\node[rotate=-41] at (7.8, -11) (block-move) {$\Leftarrow$ contains};
+		\node[rotate=-45] at (2.8, -15.5) (move-history) {$\Leftarrow$ logged};
+	\end{tikzpicture}
+\end{document}
